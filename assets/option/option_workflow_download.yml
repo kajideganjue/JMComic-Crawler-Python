@@ -1,9 +1,7 @@
 # GitHub Actions 下载脚本配置
-dir_rule: # 忽略base_dir配置项
-  rule: Bd_Amyname # A表示本子，myname表示本子的一个自定义字段
-from jmcomic import JmModuleConfig
-# Pmyname
-JmModuleConfig.PFIELD_ADVICE['myname'] = lambda photo: f'【{photo.id}】{photo.title}'
+dir_rule:
+  base_dir: ${JM_DOWNLOAD_DIR}
+  rule: Bd_Aauthor_Atitle_Pindex
 
 client:
   impl: api # 使用api可免登录下载本子
