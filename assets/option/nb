@@ -1,0 +1,3 @@
+from jmcomic import JmModuleConfig
+# Pmyname
+JmModuleConfig.PFIELD_ADVICE['myname'] = lambda photo: f'【{photo.id}】{photo.title}'
